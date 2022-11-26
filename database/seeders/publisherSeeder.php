@@ -14,6 +14,12 @@ class publisherSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('publishers')->insert([
+            'name' => 'Garmedai',
+            'address' => 'Canada',
+            'phone' => '99 38234',
+            'email' => 'garmedai_books@gmail.com',
+            'image' => 'garmedaibooks.png',
+        ]);
     }
 }

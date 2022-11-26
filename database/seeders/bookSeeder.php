@@ -14,6 +14,13 @@ class bookSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('book')->insert([
+            'publisher_id' => '1',
+            'title' => 'Romance in Binus',
+            'author' => 'Garmedai',
+            'year' => '2021',
+            'synopsis' => 'A book about romance',
+            'image' => 'romance.png',
+        ]);
     }
 }

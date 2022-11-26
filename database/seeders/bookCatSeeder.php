@@ -14,6 +14,9 @@ class bookCatSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('book_category')->insert([
+            'book_id' => '1',
+            'category_id' => '1',
+        ]);
     }
 }
