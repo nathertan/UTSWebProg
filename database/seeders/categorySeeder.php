@@ -16,7 +16,11 @@ class categorySeeder extends Seeder
     public function run()
     {
         DB::table('category')->insert([
-            'name' => 'Horror',
+            'name' => 'Romance',
+        ]);
+
+        DB::table('category')->insert([
+            'name' => 'Action',
         ]);
 
         DB::table('category')->insert([
@@ -24,11 +28,20 @@ class categorySeeder extends Seeder
         ]);
 
         DB::table('category')->insert([
-            'name' => 'Sci-Fi',
+            'name' => 'Adventure',
+        ]);
+        
+        DB::table('category')->insert([
+            'name' => 'Fiction',
         ]);
 
         DB::table('category')->insert([
-            'name' => 'Romance',
+            'name' => 'Magic',
         ]);
+
+        DB::table('category')->insert([
+            'name' => 'Fantasy',
+        ]);
+        
     }
 }
