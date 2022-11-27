@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/#">Home</a>
+                            <a class="nav-link" aria-current="page" href="/#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,7 +42,7 @@
                                 @endforeach
                             </ul>
                         <li class="nav-item">
-                            <a class="nav-link" href="/publisher">Publisher</a>
+                            <a class="nav-link active" aria-current="page" href="/publisher">Publisher</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact">Contact</a>
@@ -58,26 +58,37 @@
     <div>
         <div>
             <h4>
-                {{$book->title}}
+                {{$publisher->name}}
             </h4>
         </div>
         <div>
-            <img src="{{Storage::url('public/book_cover/'.$book->image)}}" alt="" width="250">
+            <img src="{{Storage::url('public/publisher_image/'.$publisher->image)}}" alt="" width="250">
         </div>
         <div>
-            <div>Category
-                @for ($i = 0; $i < count($book->book_category); $i++)
-                    {{ $book->book_category[$i]->category->name }}
-                    @if($i < count($book->book_category) - 1)
-                        ,
-                        @endif
-                        @endfor
-            </div>
-            <div>Author Name: {{$book->author}}</div>
-            <div>Publisher: {{$book->publisher->name}}</div>
-            <div>Release Year: {{$book->release_year}}</div>
-            <div>synopsis: {{$book->synopsis}}</div>
+            <div>Address: {{$publisher->address}}</div>
+            <div>Phone: {{$publisher->phone}}</div>
+            <div>Email: {{$publisher->email}}</div>
         </div>
+    </div>
+
+    <div>
+        Books by {{$publisher->name}}:
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4 pt-5">
+        @foreach ($publisher->book as $books)
+        <div class="col">
+            <div class="card text-center" style="width: 12rem;">
+                <div display: flex; justify-content:center;>
+                    <img src="{{Storage::url('public/book_cover/'.$books->image)}}" alt="" width="100">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ $books->title }}</h5>
+                    <p class="card-text">{{ $books->author }}</p>
+                    <a href="books/{{ $books->id }}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
 
 

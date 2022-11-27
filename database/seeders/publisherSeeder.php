@@ -27,14 +27,14 @@ class publisherSeeder extends Seeder
             'address' => 'Germany',
             'phone' => '0184585',
             'email' => 'bobo@gmail.com',
-            'image' => 'bobo.png',
+            'image' => 'bobo.jpg',
         ]);
         DB::table('publishers')->insert([
             'name' => 'YoMoon',
             'address' => 'Japan',
             'phone' => '8581723',
             'email' => 'contact@yomoon.com',
-            'image' => 'yomoon.png',
+            'image' => 'yomoon.jpg',
         ]);
         DB::table('publishers')->insert([
             'name' => 'HoloVerse',

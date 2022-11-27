@@ -30,15 +30,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/#">Home</a>
+                            <a class="nav-link" href="/#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Category
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach($category as $category)
-                                <li><a class="dropdown-item" href="/books/{{ $category->id }}">{{$category->name}}</a></li>
+                                <li><a class="dropdown-item" href="/category/{{ $category->id }}">{{$category->name}}</a></li>
                                 @endforeach
                             </ul>
                         <li class="nav-item">
@@ -54,31 +54,39 @@
 
     </div>
 
-
-
-
-
-
+    @if (count($book) != 0)
+    <div>
+        <h4>
+            {{$book[0]->category->name}}
+        </h4>
+    </div>
     <div class="row row-cols-1 row-cols-md-4 g-4 pt-5">
+
         @foreach ($book as $books)
         <div class="col">
             <div class="card text-center" style="width: 12rem;">
                 <div display: flex; justify-content:center;>
-                    <img src="{{Storage::url('public/book_cover/'.$books->image)}}" alt="" width="100">
+                    <img src="{{Storage::url('public/book_cover/'.$books->book->image)}}" alt="" width="100">
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ $books->title }}</h5>
-                    <p class="card-text">{{ $books->author }}</p>
+                    <h5 class="card-title">{{ $books->book->title }}</h5>
+                    <p class="card-text">{{ $books->book->author }}</p>
                     <a href="books/{{ $books->id }}" class="btn btn-primary">Details</a>
                 </div>
             </div>
+            @endforeach
+            @else
+            There are no books of this genre
+            @endif
         </div>
-        @endforeach
-    </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>

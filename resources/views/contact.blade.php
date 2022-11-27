@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/#">Home</a>
+                            <a class="nav-link " href="/#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +45,7 @@
                             <a class="nav-link" href="/publisher">Publisher</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact</a>
+                            <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -54,33 +54,15 @@
 
     </div>
 
-    </div>
     <div>
-        <div>
-            <h4>
-                {{$book->title}}
-            </h4>
-        </div>
-        <div>
-            <img src="{{Storage::url('public/book_cover/'.$book->image)}}" alt="" width="250">
-        </div>
-        <div>
-            <div>Category
-                @for ($i = 0; $i < count($book->book_category); $i++)
-                    {{ $book->book_category[$i]->category->name }}
-                    @if($i < count($book->book_category) - 1)
-                        ,
-                        @endif
-                        @endfor
-            </div>
-            <div>Author Name: {{$book->author}}</div>
-            <div>Publisher: {{$book->publisher->name}}</div>
-            <div>Release Year: {{$book->release_year}}</div>
-            <div>synopsis: {{$book->synopsis}}</div>
-        </div>
+        <h2>Store Address</h2>
+        <div>2, Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530</div>
+        <h3>Opening Hours</h3>
+        <div>09.00 - 20.00</div>
+        <h3>Contact Us!</h3>
+        <div>Phone: 65461377</div>
+        <div>Email:contact@giantbook.com</div>
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

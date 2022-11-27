@@ -38,7 +38,7 @@
               </a>
               <ul class="dropdown-menu">
                 @foreach($category as $category)
-                <li><a class="dropdown-item" href="/books/{{ $category->id }}">{{$category->name}}</a></li>
+                <li><a class="dropdown-item" href="/category/{{ $category->id }}">{{$category->name}}</a></li>
                 @endforeach
               </ul>
             <li class="nav-item">
