@@ -15,33 +15,32 @@ class categorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Romance',
         ]);
 
-        DB::table('category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Action',
         ]);
 
-        DB::table('category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Comedy',
         ]);
 
-        DB::table('category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Adventure',
         ]);
-        
-        DB::table('category')->insert([
+
+        DB::table('categories')->insert([
             'name' => 'Fiction',
         ]);
 
-        DB::table('category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Magic',
         ]);
 
-        DB::table('category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Fantasy',
         ]);
-        
     }
 }

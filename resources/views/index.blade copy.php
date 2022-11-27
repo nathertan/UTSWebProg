@@ -37,9 +37,13 @@
                 Category
               </a>
               <ul class="dropdown-menu">
-                @foreach($category as $category)
-                <li><a class="dropdown-item" href="/books/{{ $category->id }}">{{$category->name}}</a></li>
-                @endforeach
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                <li><a class="dropdown-item" href="#">Adventure</a></li>
+                <li><a class="dropdown-item" href="#">Fiction</a></li>
+                <li><a class="dropdown-item" href="#">Magic</a></li>
+                <li><a class="dropdown-item" href="#">Fantasy</a></li>
               </ul>
             <li class="nav-item">
               <a class="nav-link" href="/publisher">Publisher</a>
@@ -69,7 +73,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ $books->title }}</h5>
           <p class="card-text">{{ $books->author }}</p>
-          <a href="books/{{ $books->id }}" class="btn btn-primary">Details</a>
+          <a href="#" class="btn btn-primary">Details</a>
         </div>
       </div>
     </div>

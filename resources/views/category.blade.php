@@ -53,29 +53,27 @@
         </nav>
 
     </div>
-    <div>
-        <div>
-            <h4>
-                {{$book->title}}
-            </h4>
-        </div>
-        <div>
-            <img src="{{Storage::url('public/book_cover/'.$book->image)}}" alt="" width="250">
-        </div>
-        <div>
-            <div>Category
-                @for ($i = 0; $i < count($book->book_category); $i++)
-                    {{ $book->book_category[$i]->category->name }}
-                    @if($i < count($book->book_category) - 1)
-                        ,
-                        @endif
-                        @endfor
+
+
+
+
+
+
+    <div class="row row-cols-1 row-cols-md-4 g-4 pt-5">
+        @foreach ($book as $books)
+        <div class="col">
+            <div class="card text-center" style="width: 12rem;">
+                <div display: flex; justify-content:center;>
+                    <img src="{{Storage::url('public/book_cover/'.$books->image)}}" alt="" width="100">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ $books->title }}</h5>
+                    <p class="card-text">{{ $books->author }}</p>
+                    <a href="books/{{ $books->id }}" class="btn btn-primary">Details</a>
+                </div>
             </div>
-            <div>Author Name: {{$book->author}}</div>
-            <div>Publisher: {{$book->publisher->name}}</div>
-            <div>Release Year: {{$book->release_year}}</div>
-            <div>synopsis: {{$book->synopsis}}</div>
         </div>
+        @endforeach
     </div>
 
 

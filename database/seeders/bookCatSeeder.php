@@ -15,122 +15,122 @@ class bookCatSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '1',
             'category_id' => '1',
         ]);
-        
-        DB::table('book_category')->insert([
+
+        DB::table('book_categories')->insert([
             'book_id' => '1',
             'category_id' => '2',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '1',
             'category_id' => '5',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '1',
             'category_id' => '7',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '2',
             'category_id' => '2',
         ]);
 
-                DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '2',
             'category_id' => '3',
         ]);
-        
-        DB::table('book_category')->insert([
+
+        DB::table('book_categories')->insert([
             'book_id' => '2',
             'category_id' => '4',
         ]);
-        
-        DB::table('book_category')->insert([
+
+        DB::table('book_categories')->insert([
             'book_id' => '2',
             'category_id' => '5',
         ]);
-        
-        DB::table('book_category')->insert([
+
+        DB::table('book_categories')->insert([
             'book_id' => '3',
             'category_id' => '2',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '3',
             'category_id' => '5',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '3',
             'category_id' => '7',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '4',
             'category_id' => '2',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '4',
             'category_id' => '4',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '4',
             'category_id' => '5',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '4',
             'category_id' => '7',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '5',
             'category_id' => '2',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '5',
             'category_id' => '3',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '5',
             'category_id' => '4',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '6',
             'category_id' => '1',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '6',
             'category_id' => '3',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '7',
             'category_id' => '1',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '7',
             'category_id' => '2',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '7',
             'category_id' => '3',
         ]);
 
-        DB::table('book_category')->insert([
+        DB::table('book_categories')->insert([
             'book_id' => '7',
             'category_id' => '7',
         ]);
