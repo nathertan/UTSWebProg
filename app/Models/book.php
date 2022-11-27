@@ -9,11 +9,11 @@ class book extends Model
 {
     use HasFactory;
 
-    // public function publisher(){
-    //     return $this->belongsTo(publisher::class);
-    // }
+    public function publisher(){
+        return $this->belongsTo(publisher::class);
+    }
 
-    // public function category(){
-    //     return $this->belongsToMany(category::class);
-    // }
+    public function book_category(){
+        return $this->HasMany(book_category::class);
+    }
 }

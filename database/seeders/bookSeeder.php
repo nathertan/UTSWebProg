@@ -15,7 +15,7 @@ class bookSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '1',
             'title' => 'Charlotte',
             'author' => 'Jun Maeda',
@@ -23,7 +23,7 @@ class bookSeeder extends Seeder
             'synopsis' => 'Charlotte is a Japanese light novel series written by Jun Maeda and illustrated by Kurone Mishima. The series was published by ASCII Media Works under their Dengeki Bunko imprint.',
             'image' => 'charlotte.webp',
         ]);
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '3',
             'title' => 'Naruto',
             'author' => 'Masashi Kishimoto',
@@ -31,7 +31,7 @@ class bookSeeder extends Seeder
             'synopsis' => 'Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.',
             'image' => 'naruto.jpg',
         ]);
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '2',
             'title' => 'Jujutsu Kaisen',
             'author' => 'Gege Akutami',
@@ -39,7 +39,7 @@ class bookSeeder extends Seeder
             'synopsis' => 'Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami. It tells the story of Yuuji Itadori, a high school student who becomes involved in a battle between the Jujutsu Sorcerers and the Curses.',
             'image' => 'jujutsu.webp',
         ]);
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '1',
             'title' => 'The Promised Neverland',
             'author' => 'Kaiu Shirai',
@@ -47,7 +47,7 @@ class bookSeeder extends Seeder
             'synopsis' => 'The Promised Neverland is a Japanese manga series written and illustrated by Kaiu Shirai and illustrated by Posuka Demizu. It tells the story of Emma, Norman, and Ray, three orphans who live at Grace Field House, a seemingly idyllic orphanage.',
             'image' => 'promised.jpg',
         ]);
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '4',
             'title' => 'One Piece',
             'author' => 'Eiichiro Oda',
@@ -55,7 +55,7 @@ class bookSeeder extends Seeder
             'synopsis' => 'One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in Shueisha\'s Weekly Shōnen Jump magazine since July 22, 1997, and has been collected into 99 tankōbon volumes.',
             'image' => 'onepiece.jpg',
         ]);
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '2',
             'title' => 'Nisekoi',
             'author' => 'Naoshi Komi',
@@ -63,7 +63,7 @@ class bookSeeder extends Seeder
             'synopsis' => 'Nisekoi is a Japanese manga series written and illustrated by Naoshi Komi. It has been serialized in Shueisha\'s Weekly Shōnen Jump magazine since February 4, 2011, and has been collected into 26 tankōbon volumes.',
             'image' => 'nisekoi.jpg',
         ]);
-        DB::table('book')->insert([
+        DB::table('books')->insert([
             'publisher_id' => '1',
             'title' => 'Spy X Family',
             'author' => 'Tatsuya Endo',

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('book', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('publisher_id')->unsigned();
             $table->foreign('publisher_id')->references('id')->on('publishers');

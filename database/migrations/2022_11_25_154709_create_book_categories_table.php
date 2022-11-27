@@ -16,11 +16,9 @@ return new class extends Migration
         Schema::create('book_category', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('book_id')->unsigned();
-            $table->foreign('book_id')->references('id')->on('book');
+            $table->foreign('book_id')->references('id')->on('books');
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('category');
-            
-
         });
     }
 
